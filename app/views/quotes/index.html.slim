@@ -1,0 +1,5 @@
+.container
+  - @quotes.each do |quote|
+    blockquote
+      | #{quote.content}
+      footer #{quote.author}
