@@ -33,4 +33,6 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'pundit-matchers', '~> 1.1.0'
+  gem 'factory_girl'
 end
