@@ -7,6 +7,13 @@
   hr
 
 - @quotes.each do |quote|
-  blockquote
-    | #{quote.content}
-    footer #{quote.author}
+  .container
+    .flexbox.flexbox-between
+      .flexitem-size-10
+        - if policy(@quote).destroy?
+          = link_to quote_path(quote), method: :delete, class: 'btn btn-danger' do
+            i.fa.fa-trash
+      .flexitem-main
+        blockquote
+          | #{quote.content}
+          footer #{quote.author}

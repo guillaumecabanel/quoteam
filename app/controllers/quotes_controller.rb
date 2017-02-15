@@ -1,5 +1,6 @@
 class QuotesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
+  before_action :set_quote, only: [:destroy]
 
   def index
     @quotes = policy_scope(Quote)
@@ -13,11 +14,22 @@ class QuotesController < ApplicationController
     if @quote.save
       redirect_to quotes_path
     else
-      render "index"
+      redirect_to quotes_path
     end
   end
 
+  def destroy
+    @quote.destroy
+    authorize @quote
+    redirect_to quotes_path
+  end
+
   private
+
+    def set_quote
+      @quote = Quote.find(params[:id])
+    end
+
     def quote_params
       params.require(:quote).permit(:content, :author)
     end
