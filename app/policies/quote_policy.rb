@@ -4,4 +4,12 @@ class QuotePolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def index?
+    true
+  end
+
+  def create?
+    user
+  end
 end

@@ -1,3 +1,10 @@
+= simple_form_for @quote do |f|
+  = f.input :content
+  = f.input :author
+  = f.button :submit, class: 'btn btn-success'
+
+hr
+
 - @quotes.each do |quote|
   blockquote
     | #{quote.content}
