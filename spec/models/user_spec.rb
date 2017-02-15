@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject(:user) do
-    User.new(email: "bob@email.com", password: "password")
-  end
+  subject(:user) { User.new }
 
   describe "validations" do
     it 'requires presence of an email' do

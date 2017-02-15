@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Quote, type: :model do
-  subject(:quote) do
-    Quote.new(content: "Hello world", author: "God")
-  end
+  subject(:quote) { Quote.new }
 
   describe "validations" do
     it 'requires presence of a content' do
