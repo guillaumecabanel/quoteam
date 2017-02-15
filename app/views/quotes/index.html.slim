@@ -1,9 +1,10 @@
-= simple_form_for @quote do |f|
-  = f.input :content
-  = f.input :author
-  = f.button :submit, class: 'btn btn-success'
+- if policy(@quote).create?
+  = simple_form_for @quote do |f|
+    = f.input :content
+    = f.input :author
+    = f.button :submit, class: 'btn btn-success'
 
-hr
+  hr
 
 - @quotes.each do |quote|
   blockquote
