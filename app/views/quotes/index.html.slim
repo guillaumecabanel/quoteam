@@ -11,6 +11,4 @@
       .flexitem-main
         blockquote
           = quote.content
-          footer
-            = quote.author
-          = pluralize(quote.get_likes.size, 'vote')
+          footer = quote.author

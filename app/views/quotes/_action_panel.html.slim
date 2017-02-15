@@ -9,3 +9,5 @@
   '&nbsp;
   = link_to quote_path(quote), method: :delete, class: 'btn btn-xs btn-danger' do
     i.fa.fa-trash
+br
+em = pluralize(quote.get_likes.size, 'vote')
