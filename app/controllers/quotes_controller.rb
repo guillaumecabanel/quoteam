@@ -26,6 +26,8 @@ class QuotesController < ApplicationController
 
   def upvote
     @quote.liked_by current_user
+    @quote.dislike_by current_user unless @quote.vote_registered?
+
     authorize @quote
     redirect_to quotes_path
   end

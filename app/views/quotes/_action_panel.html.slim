@@ -1,6 +1,9 @@
 - if policy(@quote).upvote?
   = link_to upvote_quote_path(quote), method: :patch, class: 'btn btn-xs btn-default' do
-    i.fa.fa-heart
+    -if current_user.liked? quote
+      i.fa.fa-heart
+    -else
+      i.fa.fa-heart-o
 
 - if policy(@quote).destroy?
   '&nbsp;
