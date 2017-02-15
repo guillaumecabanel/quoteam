@@ -16,4 +16,8 @@ class QuotePolicy < ApplicationPolicy
   def destroy?
     user && user.admin?
   end
+
+  def upvote?
+    user
+  end
 end

@@ -1,8 +1,5 @@
 - if policy(@quote).create?
-  = simple_form_for @quote do |f|
-    = f.input :content
-    = f.input :author
-    = f.button :submit, class: 'btn btn-success'
+  = render 'create_form', quote: @quote
 
   hr
 
@@ -10,10 +7,10 @@
   .container
     .flexbox.flexbox-between
       .flexitem-size-10
-        - if policy(@quote).destroy?
-          = link_to quote_path(quote), method: :delete, class: 'btn btn-danger' do
-            i.fa.fa-trash
+        = render 'action_panel', quote: quote
       .flexitem-main
         blockquote
-          | #{quote.content}
-          footer #{quote.author}
+          = quote.content
+          footer
+            = quote.author
+          = pluralize(quote.get_likes.size, 'vote')

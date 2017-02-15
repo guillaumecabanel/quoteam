@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
-  before_action :set_quote, only: [:destroy]
+  before_action :set_quote, only: [:destroy, :upvote]
 
   def index
     @quotes = policy_scope(Quote)
@@ -20,6 +20,12 @@ class QuotesController < ApplicationController
 
   def destroy
     @quote.destroy
+    authorize @quote
+    redirect_to quotes_path
+  end
+
+  def upvote
+    @quote.liked_by current_user
     authorize @quote
     redirect_to quotes_path
   end
