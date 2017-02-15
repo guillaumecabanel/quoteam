@@ -1,7 +1,8 @@
 - if policy(@quote).upvote?
-  = link_to upvote_quote_path(quote), method: :patch do
+  = link_to upvote_quote_path(quote), method: :patch, class: 'btn btn-xs btn-default' do
     i.fa.fa-heart
 
 - if policy(@quote).destroy?
-  = link_to quote_path(quote), method: :delete do
+  '&nbsp;
+  = link_to quote_path(quote), method: :delete, class: 'btn btn-xs btn-danger' do
     i.fa.fa-trash
