@@ -1,0 +1,5 @@
+fr:
+  navbar:
+    sign_out: "Se déconnecter"
+    sign_up:  "S'inscrire"
+    log_in:   "Se connecter"
