@@ -3,4 +3,5 @@ h1
   br
   small = t('.catch_phrase')
 
-= link_to t('.links.team_quotes'), quotes_path, class: "btn btn-primary"
+- if current_user
+  = link_to t('.links.team_quotes'), team_quotes_path(current_user.team), class: "btn btn-primary"

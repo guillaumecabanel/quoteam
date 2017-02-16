@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /fr/ do
     root to: 'pages#home'
 
-    resources :quotes, only: [:index, :create, :destroy] do
-      member do
-        patch :upvote
+    resources :teams, only: [:show, :new, :create] do
+      resources :quotes, only: [:index, :create, :destroy] do
+        member do
+          patch :upvote
+        end
       end
     end
   end

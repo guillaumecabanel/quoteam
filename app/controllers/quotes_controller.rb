@@ -1,6 +1,7 @@
 class QuotesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
   before_action :set_quote, only: [:destroy, :upvote]
+  before_action :find_team, only: [:index, :upvote]
 
   def index
     @quotes = policy_scope(Quote)
@@ -12,16 +13,16 @@ class QuotesController < ApplicationController
     @quote = Quote.new(quote_params)
     authorize @quote
     if @quote.save
-      redirect_to quotes_path
+      redirect_to team_quotes_path
     else
-      redirect_to quotes_path
+      redirect_to team_quotes_path
     end
   end
 
   def destroy
     @quote.destroy
     authorize @quote
-    redirect_to quotes_path
+    redirect_to team_quotes_path
   end
 
   def upvote
@@ -29,16 +30,20 @@ class QuotesController < ApplicationController
     @quote.dislike_by current_user unless @quote.vote_registered?
 
     authorize @quote
-    redirect_to quotes_path
+    redirect_to team_quotes_path
   end
 
   private
+
+    def find_team
+      @team = Team.find(params[:team_id])
+    end
 
     def set_quote
       @quote = Quote.find(params[:id])
     end
 
     def quote_params
-      params.require(:quote).permit(:content, :author)
+      params.require(:quote).permit(:content, :author, :team_id)
     end
 end
