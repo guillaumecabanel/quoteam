@@ -1,12 +1,18 @@
 class QuotePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      if user
+        scope.where(team: user.team)
+      end
     end
   end
 
   def index?
-    true
+    user
+  end
+
+  def show?
+    user
   end
 
   def create?

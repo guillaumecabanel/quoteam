@@ -1,4 +1,7 @@
 fr:
+  pundit:
+    alert:
+      not_authorized: "Vous n'êtes pas autorisé à réaliser cette action"
   pages:
     home:
       catch_phrase: "Partagez vos meilleures citations avec votre équipe !"

@@ -3,12 +3,13 @@ require 'rails_helper'
 describe QuotePolicy do
   subject { QuotePolicy.new(user, quote) }
 
+  # let(:team) { FactoryGirl.create(:team) }
   let(:quote) { FactoryGirl.create(:quote) }
 
   context "being a visitor" do
     let(:user) { nil }
 
-    it { is_expected.to permit_action(:show)    }
+    it { is_expected.to forbid_action(:show)    }
     it { is_expected.to forbid_action(:create)  }
     it { is_expected.to forbid_action(:new)     }
     it { is_expected.to forbid_action(:update)  }

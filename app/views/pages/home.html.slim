@@ -3,5 +3,7 @@ h1
   br
   small = t('.catch_phrase')
 
-- if current_user
+- if current_user && current_user.team
   = link_to t('.links.team_quotes'), team_quotes_path(current_user.team), class: "btn btn-primary"
+- elsif current_user
+  p Find a team!

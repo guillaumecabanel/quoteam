@@ -1,4 +1,7 @@
 en:
+  pundit:
+    alert:
+      not_authorized: "You are not authorized to perform this action."
   pages:
     home:
       catch_phrase: "Share your best quotes with your team!"
