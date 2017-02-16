@@ -1,13 +1,12 @@
+em = quote.get_likes.size
+'&nbsp;
 - if policy(@quote).upvote?
-  = link_to upvote_quote_path(quote), method: :patch, class: 'btn btn-xs btn-default' do
-    -if current_user.liked? quote
-      i.fa.fa-heart
-    -else
-      i.fa.fa-heart-o
+  = link_to upvote_quote_path(quote), method: :patch, class: 'text-red' do
+    i class=quote_like_css(current_user,  quote)
+- else
+  i class=quote_like_css(nil,  quote)
 
 - if policy(@quote).destroy?
   '&nbsp;
-  = link_to quote_path(quote), method: :delete, class: 'btn btn-xs btn-danger' do
+  = link_to quote_path(quote), method: :delete, class: 'btn btn-xs btn-warning' do
     i.fa.fa-trash
-br
-em = pluralize(quote.get_likes.size, 'vote')
