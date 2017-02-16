@@ -1,5 +1,6 @@
 fr:
   pages:
     home:
+      catch_phrase: "Partagez vos meilleures citations avec votre équipe !"
       links:
-        see_quotes: "Voir les citations"
+        team_quotes: "Les citations de mon équipe"

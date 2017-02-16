@@ -1,5 +1,6 @@
 en:
   pages:
     home:
+      catch_phrase: "Share your best quotes with your team!"
       links:
-        see_quotes: "See quotes"
+        team_quotes: "My team's quotes"
