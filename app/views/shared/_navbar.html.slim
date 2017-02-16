@@ -5,7 +5,7 @@ nav.navbar.navbar-default
     ul.nav.navbar-nav.navbar-right
       - if current_user
         li.navbar-text = current_user.email
-        li = link_to t('navbar.sign_out'), destroy_user_session_path, method: 'delete'
+        li = link_to t('devise.sign_out'), destroy_user_session_path, method: 'delete'
       - else
-        li = link_to t('navbar.sign_up'), new_user_registration_path
-        li = link_to t('navbar.log_in'), new_user_session_path, class: ''
+        li = link_to t('devise.shared.links.sign_up'), new_user_registration_path
+        li = link_to t('devise.shared.links.sign_in'), new_user_session_path, class: ''

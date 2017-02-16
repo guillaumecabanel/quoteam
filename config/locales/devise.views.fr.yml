@@ -12,6 +12,7 @@ fr:
     models:
       user: Utilisateur
   devise:
+    sign_out: "Déconnexion"
     confirmations:
       confirmed: Votre compte a été confirmé avec succès.
       new:
