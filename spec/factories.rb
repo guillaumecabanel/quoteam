@@ -11,7 +11,6 @@ FactoryGirl.define do
     email    { Faker::Internet.email }
     password "password"
     admin    false
-    team
   end
 end
 
@@ -21,7 +20,6 @@ FactoryGirl.define do
     email    "admin@email.com"
     password "password"
     admin    true
-    team
   end
 end
 
@@ -30,6 +28,14 @@ FactoryGirl.define do
   factory :quote do
     content { Faker::ChuckNorris.fact }
     author  { Faker::Name.name }
+    team
+  end
+end
+
+# enrollment
+FactoryGirl.define do
+  factory :enrollment do
+    user
     team
   end
 end

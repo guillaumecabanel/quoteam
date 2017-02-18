@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe QuotePolicy do
-  subject { QuotePolicy.new(user, quote) }
+describe TeamPolicy do
+  subject { TeamPolicy.new(user, team) }
 
-  let(:quote) { FactoryGirl.create(:quote) }
+  let(:team) { FactoryGirl.create(:team) }
 
   context "being a visitor" do
     let(:user) { nil }
@@ -16,7 +16,18 @@ describe QuotePolicy do
     it { is_expected.to forbid_action(:destroy) }
   end
 
-  context "being a user" do
+  context "being an unenrolled user" do
+    let(:user) { FactoryGirl.create(:user) }
+
+    it { is_expected.to forbid_action(:show)    }
+    it { is_expected.to permit_action(:create)  }
+    it { is_expected.to permit_action(:new)     }
+    it { is_expected.to forbid_action(:update)  }
+    it { is_expected.to forbid_action(:edit)    }
+    it { is_expected.to forbid_action(:destroy) }
+  end
+
+  context "being an enrolled user" do
     let(:user) { FactoryGirl.create(:user) }
     let(:enrollment) { FactoryGirl.create(:enrollment) }
 
