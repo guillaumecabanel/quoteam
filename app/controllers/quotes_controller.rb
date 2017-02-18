@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:destroy, :upvote]
-  before_action :find_team, only: [:create, :upvote, :destroy]
+  before_action :set_team, only: [:create, :upvote, :destroy]
 
   def create
     @quote = Quote.new(quote_params)
@@ -29,7 +29,7 @@ class QuotesController < ApplicationController
 
   private
 
-    def find_team
+    def set_team
       @team = Team.find(params[:team_id])
     end
 

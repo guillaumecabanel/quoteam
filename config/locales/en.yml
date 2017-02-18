@@ -5,7 +5,10 @@ en:
   pages:
     home:
       catch_phrase: "Share your best quotes with your team!"
-      links:
-        team_quotes: "My team's quotes"
+      your_teams: "Your teams"
   teams:
-    new: "New team"
+    new:
+      new_team: "New team"
+
+  quotes:
+    quote: "Quote"

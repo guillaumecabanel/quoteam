@@ -1,10 +1,15 @@
 - if current_user && current_user.enrollments.any?
-  - current_user.enrollments.each do |enrollment|
-    = link_to enrollment.team.name, team_path(enrollment.team), class: 'btn btn-default'
+  h2 = t('.your_teams')
+  .list-group
+    - current_user.enrollments.each do |enrollment|
+      li.list-group-item.flexbox.flexbox-between
+        = link_to enrollment.team.name, team_path(enrollment.team)
+        span.label.label-info
+          = pluralize(enrollment.team.quotes.count, t('quotes.quote'))
     
 - if current_user
   hr
-  = link_to t('teams.new'), new_team_path, class: 'btn btn-success'
+  = link_to t('teams.new.new_team'), new_team_path, class: 'btn btn-success'
 - else
   .row
     .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
