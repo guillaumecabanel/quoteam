@@ -6,7 +6,7 @@ class TeamPolicy < ApplicationPolicy
   end
 
   def show?
-    @record.enrollments.find_by_user_id(user)
+    record.enrollments.find_by_user_id(user)
   end
 
   def new?
