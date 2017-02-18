@@ -8,9 +8,15 @@ en:
     home:
       catch_phrase: "Share your best quotes with your team!"
       your_teams: "Your teams"
+
   teams:
     new:
       new_team: "New team"
+
+  enrollments:
+    new:
+      join_team: "Join a team"
+      enroll: "Join this team"
 
   quotes:
     quote: "Quote"

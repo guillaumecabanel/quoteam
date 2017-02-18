@@ -1,0 +1,3 @@
+= form_tag enrollments_path, method: :post do
+  = text_field_tag "team[secret_id]"
+  = submit_tag t('enrollments.new.enroll'), class: 'btn btn-success'

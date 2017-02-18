@@ -11,5 +11,7 @@ Rails.application.routes.draw do
         end
       end
     end
+
+    resources :enrollments, only: [:new, :create]
   end
 end
