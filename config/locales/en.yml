@@ -8,14 +8,19 @@ en:
     home:
       catch_phrase: "Share your best quotes with your team!"
       your_teams: "Your teams"
+      no_team?: "No team yet?"
+      create_a_new_team: "Create a new team or"
+      join_one_with_invite: "join one with an invite code!"
 
   teams:
     new:
       new_team: "New team"
+    show:
+      share: "Share this code to invite new members"
 
   enrollments:
     new:
-      join_team: "Join a team"
+      join_team: "Join team by invite code"
       invite_code: "Invite code"
       enroll: "Join this team"
 

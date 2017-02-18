@@ -10,11 +10,20 @@
           | )
         .label.label-info
           = pluralize(enrollment.team.quotes.count, t('quotes.quote'))
-    
-- if current_user
+  
+- if current_user && current_user.enrollments.empty?
+  .panel.panel-info
+    .panel-body
+      = t('.no_team?')
+      | &nbsp;
+      = t('.create_a_new_team')
+      | &nbsp;
+      = link_to t('.join_one_with_invite'), new_enrollment_path
+      
   hr
   = link_to t('teams.new.new_team'), new_team_path, class: 'btn btn-success'
-  | &nbsp;
+  br
+  br
   = link_to t('enrollments.new.join_team'), new_enrollment_path
 - else
   .row

@@ -1,7 +1,9 @@
 h1 = @team.name
 
-- @members.each do |member|
-  li = member.user.email
+.panel.panel-info
+  .panel-body
+    p = t('.share')
+    = text_field_tag "", @team.invite_code
 
 - if policy(@quote).create?
   = render 'quotes/new_form', quote: @quote
