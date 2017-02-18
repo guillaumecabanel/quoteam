@@ -6,7 +6,7 @@ class EnrollmentsController < ApplicationController
   end
 
   def create
-    @team = Team.find_by_secret_id(team_params[:secret_id])
+    @team = Team.find_by_invite_code(team_params[:invite_code])
     authorize @team
     if @team
       Enrollment.create(user: current_user, team: @team)
@@ -19,7 +19,7 @@ class EnrollmentsController < ApplicationController
   private
 
     def team_params
-      params.require(:team).permit(:secret_id)
+      params.require(:team).permit(:invite_code)
     end
 
 end

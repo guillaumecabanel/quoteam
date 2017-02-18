@@ -1,6 +1,6 @@
 h2 = t('.join_team')
 = form_tag enrollments_path, method: :post do
   .form-group
-    = label_tag "team[secret_id]", t('.secret_id')
-    = text_field_tag "team[secret_id]", "", class: 'form-control'
+    = label_tag "team[invite_code]", t('.invite_code')
+    = text_field_tag "team[invite_code]", "", class: 'form-control'
   = submit_tag t('.enroll'), class: 'btn btn-success'

@@ -16,7 +16,7 @@ en:
   enrollments:
     new:
       join_team: "Join a team"
-      secret_id: "Invite code"
+      invite_code: "Invite code"
       enroll: "Join this team"
 
   quotes:
