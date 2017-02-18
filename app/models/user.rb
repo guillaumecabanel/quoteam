@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   acts_as_voter
-  belongs_to :team
+  has_many :enrollments
+  has_many :teams, through: :enrollment
 
 end
