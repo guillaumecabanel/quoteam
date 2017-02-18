@@ -1,13 +1,11 @@
 class TeamPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      if user
-        scope.all
-      end
+      scope
     end
   end
 
   def show?
-    user
+    @record.enrollments.find_by_user_id(user)
   end
 end

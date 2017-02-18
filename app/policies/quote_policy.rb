@@ -11,6 +11,10 @@ class QuotePolicy < ApplicationPolicy
     user
   end
 
+  def create?
+    user
+  end
+
   def destroy?
     user && user.admin?
   end
