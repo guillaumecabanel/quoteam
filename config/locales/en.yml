@@ -7,3 +7,5 @@ en:
       catch_phrase: "Share your best quotes with your team!"
       links:
         team_quotes: "My team's quotes"
+  teams:
+    new: "New team"

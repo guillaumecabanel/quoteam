@@ -1,21 +1,19 @@
+# Destroy previous records
+puts 'Removing existing enrollments'
+Enrollment.destroy_all
 puts 'Removing existing quotes...'
 Quote.destroy_all
-puts 'Removing existing users...'
-User.destroy_all
 puts 'Removing existing teams...'
 Team.destroy_all
+puts 'Removing existing users...'
+User.destroy_all
 
-
-puts 'Generating a team...'
-team = Team.create!(name: Faker::Company.name)
-
-
+# Generating new records
 puts 'Generating an admin...'
 User.create!(
   email: 'admin@email.com',
   password: 'password',
-  admin: true,
-  team: team
+  admin: true
 )
 
 puts 'Generating users...'
@@ -23,7 +21,17 @@ puts 'Generating users...'
   User.create!(
     email: Faker::Internet.email,
     password: 'password',
-    team: team
+  )
+end
+
+puts 'Generating a team...'
+team = Team.create!(name: Faker::Company.name)
+
+puts 'Enrolling all users in this team'
+User.all.each do |user|
+  Enrollment.create!(
+  user: user,
+  team: team
   )
 end
 

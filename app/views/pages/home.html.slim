@@ -1,9 +1,18 @@
-h1
-  | Quoteam
-  br
-  small = t('.catch_phrase')
-
-- if current_user && current_user.team
-  = link_to t('.links.team_quotes'), team_quotes_path(current_user.team), class: "btn btn-primary"
-- elsif current_user
-  p TODO: Choose Team
+- if current_user && current_user.enrollments.any?
+  - current_user.enrollments.each do |enrollment|
+    = link_to enrollment.team.name, team_quotes_path(enrollment.team), class: 'btn btn-default'
+    
+- if current_user
+  hr
+  = link_to t('teams.new'), new_team_path, class: 'btn btn-success'
+- else
+  .row
+    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+      .panel.panel-default
+        .panel-body
+          h1
+            | Quoteam
+            br
+            small = t('.catch_phrase')
+          = link_to t('devise.shared.links.sign_up'), new_user_registration_path, class: 'btn btn-primary btn-block'
+          = link_to t('devise.shared.links.sign_in'), new_user_session_path, class: 'btn btn-default btn-block'
