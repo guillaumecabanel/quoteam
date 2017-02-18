@@ -1,5 +1,8 @@
 h1 = @team.name
 
+- @members.each do |member|
+  li = member.user.email
+
 - if policy(@quote).create?
   = render 'quotes/new_form', quote: @quote
 

@@ -5,6 +5,8 @@ class TeamsController < ApplicationController
     @quotes = Quote.where(team: @team)
     @quote = Quote.new
     authorize @quote
+
+    @members = Enrollment.where(team: @team)
   end
 
   def new

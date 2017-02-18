@@ -3,8 +3,12 @@
   .list-group
     - current_user.enrollments.each do |enrollment|
       li.list-group-item.flexbox.flexbox-between
-        = link_to enrollment.team.name, team_path(enrollment.team)
-        span.label.label-info
+        div
+          = link_to enrollment.team.name, team_path(enrollment.team)
+          | &nbsp;(
+          = pluralize(enrollment.team.enrollments.count, t('users.member'))
+          | )
+        .label.label-info
           = pluralize(enrollment.team.quotes.count, t('quotes.quote'))
     
 - if current_user
