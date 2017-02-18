@@ -8,11 +8,11 @@ class ApplicationController < ActionController::Base
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
-  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
-  def user_not_authorized
-    flash[:alert] = t('pundit.alert.not_authorized')
-    redirect_to(root_path)
-  end
+  # rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  # def user_not_authorized
+  #   flash[:alert] = t('pundit.alert.not_authorized')
+  #   redirect_to(root_path)
+  # end
 
   def set_locale
     # Choosing an Implied Locale (http://guides.rubyonrails.org/i18n.html#choosing-an-implied-locale)

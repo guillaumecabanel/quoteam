@@ -1,6 +1,6 @@
 - if current_user && current_user.enrollments.any?
   - current_user.enrollments.each do |enrollment|
-    = link_to enrollment.team.name, team_quotes_path(enrollment.team), class: 'btn btn-default'
+    = link_to enrollment.team.name, team_path(enrollment.team), class: 'btn btn-default'
     
 - if current_user
   hr

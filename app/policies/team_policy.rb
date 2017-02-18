@@ -2,10 +2,12 @@ class TeamPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       if user
-        scope.find_by_id(user.team.id)
-      else
-        false
+        scope.all
       end
     end
+  end
+
+  def show?
+    user
   end
 end
