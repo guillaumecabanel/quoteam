@@ -7,7 +7,7 @@ class Team < ApplicationRecord
   # record a secret id to invite members
   before_create do |team|
     digest = Digest::SHA2.new.to_s << Time.now.to_s
-    team.secret_id = digest.split(//).sample(10).join
+    team.secret_id = digest[0..63].split(//).sample(16).join
   end
 
 end
