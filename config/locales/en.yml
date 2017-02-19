@@ -1,28 +1,28 @@
+---
 en:
-  pundit:
-    alert:
-      not_authorized: "You are not authorized to perform this action."
-  users:
-    member: "member"
-  pages:
-    home:
-      catch_phrase: "Share your best quotes with your team!"
-      your_teams: "Your teams"
-      no_team?: "No team yet?"
-      create_a_new_team: "Create a new team or"
-      join_one_with_invite: "join one with an invite code!"
-
-  teams:
-    new:
-      new_team: "New team"
-    show:
-      share: "Share this code to invite new members"
-
   enrollments:
     new:
-      join_team: "Join team by invite code"
-      invite_code: "Invite code"
-      enroll: "Join this team"
-
+      enroll: Join this team
+      invite_code: Invite code
+      join_team: Join team by invite code
+  pages:
+    home:
+      catch_phrase: Share your best quotes with your team!
+      create_a_new_team: Create a new team or
+      join_one_with_invite: join one with an invite code!
+      links:
+        team_quotes: Les citations de mon équipe
+      no_team?: No team yet?
+      your_teams: Your teams
+  pundit:
+    alert:
+      not_authorized: You are not authorized to perform this action.
   quotes:
-    quote: "Quote"
+    quote: Quote
+  teams:
+    new:
+      new_team: New team
+    show:
+      share: Share this code to invite new members
+  users:
+    member: member

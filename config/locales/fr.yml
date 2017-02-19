@@ -1,9 +1,28 @@
+---
 fr:
-  pundit:
-    alert:
-      not_authorized: "Vous n'êtes pas autorisé à réaliser cette action"
+  enrollments:
+    new:
+      enroll: Rejoindre ce groupe
+      invite_code: code d'invitation
+      join_team: Rejoindre un groupe avec un code d'invitation
   pages:
     home:
-      catch_phrase: "Partagez vos meilleures citations avec votre équipe !"
+      catch_phrase: Partagez vos meilleures citations avec votre équipe !
+      create_a_new_team: Créer un groupe ou
+      join_one_with_invite: en rejoindre un avec un code d'invitation !
       links:
-        team_quotes: "Les citations de mon équipe"
+        team_quotes: Les citations de mon équipe
+      no_team?: Pas encore de groupe ?
+      your_teams: Vos groupes
+  pundit:
+    alert:
+      not_authorized: Vous n'êtes pas autorisé à réaliser cette action
+  quotes:
+    quote: Citation
+  teams:
+    new:
+      new_team: Nouveau groupe
+    show:
+      share: Partagez ce code d'inviation pour inviter de nouveaux membres
+  users:
+    member: membre

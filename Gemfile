@@ -26,6 +26,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'faker'
 
+  gem 'i18n-tasks', '~> 0.9.12'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
