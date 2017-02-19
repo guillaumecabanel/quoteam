@@ -1,5 +1,6 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://app-54b26891-e9ef-4c67-a461-8cdb570ff9b2.cleverapps.io/" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "http://www.quoteam.top" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

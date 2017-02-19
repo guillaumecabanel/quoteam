@@ -12,6 +12,7 @@ gem 'redis'
 gem 'pundit'
 gem 'slim'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'postmark'
 
 gem 'sass-rails'
 gem 'jquery-rails'
