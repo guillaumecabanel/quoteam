@@ -18,8 +18,13 @@ fr:
       not_authorized: Vous n'êtes pas autorisé à réaliser cette action
   quotes:
     quote: Citation
+    new_form:
+      new: Ajouter une citation !
+      create: Ajouter cette citation
     destroy:
       quote_deleted: Citation supprimée.
+    action_panel:
+      time_ago: "il y a %{time}."
   teams:
     index:
       your_teams: Vos groupes

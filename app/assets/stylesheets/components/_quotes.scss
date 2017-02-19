@@ -1,0 +1,18 @@
+.quote{
+  background-color: $white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: $border-radius-base;
+  &-content{
+
+  }
+
+  &-action-panel{
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid $brand-primary;
+    &-time{
+      color: lighten($gray, 30%);
+    }
+  }
+}

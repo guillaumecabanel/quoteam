@@ -1,0 +1,7 @@
+.quote
+  .h4.quote-content
+    i.fa.fa-quote-left
+    | &nbsp;
+    = quote.content
+  .quote-author = "— #{quote.author}"
+  = render 'quotes/action_panel', quote: quote, team: team

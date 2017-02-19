@@ -1,4 +1,10 @@
-= simple_form_for [@team, quote] do |f|
-  = f.input :content
-  = f.input :author 
-  = f.button :submit, class: 'btn btn-success'
+.container
+  .row
+    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+      .panel.panel-success
+        .panel-heading = t('.new')
+        .panel-body
+          = simple_form_for [@team, quote] do |f|
+            = f.input :content
+            = f.input :author 
+            = f.button :submit, t('.create'), class: 'btn btn-success'

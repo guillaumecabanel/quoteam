@@ -10,12 +10,8 @@ h1 = @team.name
 
   hr
 
-- @quotes.each do |quote|
-  .container
-    .flexbox.flexbox-between
-      .flexitem-size-10
-        = render 'quotes/action_panel', quote: quote
-      .flexitem-main
-        blockquote
-          = quote.content
-          footer = quote.author
+.container
+  .row
+    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+      - @quotes.each do |quote|
+        = render 'quotes/quote', quote: quote, team: @team

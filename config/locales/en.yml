@@ -18,8 +18,13 @@ en:
       not_authorized: You are not authorized to perform this action.
   quotes:
     quote: Quote
+    new_form:
+      new: Add a quote!
+      create: Add this quote
     destroy:
       quote_deleted: Quote has been deleted.
+    action_panel:
+      time_ago: "%{time} ago."
   teams:
     index:
       your_teams: Your teams
