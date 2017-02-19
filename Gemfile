@@ -25,7 +25,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'faker'
-
+  gem "letter_opener"
   gem 'i18n-tasks', '~> 0.9.12'
   gem 'pry-byebug'
   gem 'pry-rails'
