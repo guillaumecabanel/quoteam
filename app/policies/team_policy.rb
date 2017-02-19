@@ -16,4 +16,5 @@ class TeamPolicy < ApplicationPolicy
   def create?
     user
   end
+
 end
