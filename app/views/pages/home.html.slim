@@ -1,40 +1,10 @@
-- if current_user && current_user.enrollments.any?
-  h2 = t('.your_teams')
-  .list-group
-    - current_user.enrollments.each do |enrollment|
-      li.list-group-item.flexbox.flexbox-between
-        div
-          = link_to enrollment.team.name, team_path(enrollment.team)
-          | &nbsp;(
-          = pluralize(enrollment.team.enrollments.count, t('users.member'))
-          | )
-        .label.label-info
-          = pluralize(enrollment.team.quotes.count, t('quotes.quote'))
-  
-- if current_user && current_user.enrollments.empty?
-  .panel.panel-info
-    .panel-body
-      = t('.no_team?')
-      | &nbsp;
-      = t('.create_a_new_team')
-      | &nbsp;
-      = link_to t('.join_one_with_invite'), new_enrollment_path
-      
-- if current_user
-  hr
-  = link_to t('teams.new.new_team'), new_team_path, class: 'btn btn-success'
-  br
-  br
-  = link_to t('enrollments.new.join_team'), new_enrollment_path
-
-- else
-  .row
-    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
-      .panel.panel-default
-        .panel-body
-          h1
-            | Quoteam
-            br
-            small = t('.catch_phrase')
-          = link_to t('devise.shared.links.sign_up'), new_user_registration_path, class: 'btn btn-primary btn-block'
-          = link_to t('devise.shared.links.sign_in'), new_user_session_path, class: 'btn btn-default btn-block'
+.row
+  .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+    .panel.panel-default
+      .panel-body
+        h1
+          | Quoteam
+          br
+          small = t('.catch_phrase')
+        = link_to t('devise.shared.links.sign_up'), new_user_registration_path, class: 'btn btn-primary btn-block'
+        = link_to t('devise.shared.links.sign_in'), new_user_session_path, class: 'btn btn-default btn-block'

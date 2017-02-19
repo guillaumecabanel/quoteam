@@ -1,6 +1,11 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show]
 
+  def index
+    @teams = policy_scope(Team)
+    authorize @teams
+  end
+
   def show
     @quotes = Quote.where(team: @team)
     @quote = Quote.new

@@ -5,6 +5,10 @@ class TeamPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    user
+  end
+
   def show?
     record.enrollments.find_by_user_id(user)
   end
