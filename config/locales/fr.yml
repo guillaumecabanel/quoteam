@@ -5,24 +5,30 @@ fr:
       enroll: Rejoindre ce groupe
       invite_code: code d'invitation
       join_team: Rejoindre un groupe avec un code d'invitation
+    create:
+      team_added: "Vous avez rejoins %{team}!"
+      invalid_code: Code invalide
   pages:
     home:
       catch_phrase: Partagez vos meilleures citations avec votre équipe !
       create_a_new_team: Créer un groupe ou
-      join_one_with_invite: en rejoindre un avec un code d'invitation !
-      links:
-        team_quotes: Les citations de mon équipe
       no_team?: Pas encore de groupe ?
-      your_teams: Vos groupes
   pundit:
     alert:
       not_authorized: Vous n'êtes pas autorisé à réaliser cette action
   quotes:
     quote: Citation
+    destroy:
+      quote_deleted: Citation supprimée.
   teams:
+    index:
+      your_teams: Vos groupes
+      join_one_with_invite: en rejoindre un avec un code d'invitation !
     new:
       new_team: Nouveau groupe
     show:
       share: Partagez ce code d'inviation pour inviter de nouveaux membres
+    create:
+      team_created: "%{team} a été créé ! Invitez y vos amis :)"
   users:
     member: membre

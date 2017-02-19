@@ -10,7 +10,6 @@ class TeamsController < ApplicationController
     @quotes = Quote.where(team: @team)
     @quote = Quote.new
     authorize @quote
-
     @members = Enrollment.where(team: @team)
   end
 
@@ -24,6 +23,7 @@ class TeamsController < ApplicationController
     authorize @team
     if @team.save
       Enrollment.create(user: current_user, team: @team)
+      flash[:notice] = t('.team_created', team: @team.name)
       redirect_to team_path(@team)
     else
       render 'new'

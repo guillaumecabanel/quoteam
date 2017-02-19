@@ -16,6 +16,7 @@ class QuotesController < ApplicationController
   def destroy
     @quote.destroy
     authorize @quote
+    flash[:notice] = t('.quote_deleted')
     redirect_to team_path(@team)
   end
 
