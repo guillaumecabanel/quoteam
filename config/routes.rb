@@ -14,4 +14,9 @@ Rails.application.routes.draw do
 
     resources :enrollments, only: [:new, :create]
   end
+
+  # SSL
+
+  get ".well-known/acme-challenge/#{ENV['SSL_URL']}", to: 'ssl#verify'
+
 end

@@ -10,5 +10,5 @@ public/assets
 # Ignore application configuration
 /config/application.yml
 
-# Ignore SSL key
-/config/quoteam.key
+# Ignore SSL config
+/config/ssl/
