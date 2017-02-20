@@ -13,3 +13,4 @@ public/assets
 # Ignore SSL folder
 public/.well-known
 authorization_uri
+*.pem
