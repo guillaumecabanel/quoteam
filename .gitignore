@@ -9,3 +9,7 @@ public/assets
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore SSL folder
+public/.well-known
+authorization_uri
