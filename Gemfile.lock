@@ -1,8 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    acme-client (0.5.0)
+    acme-client (0.3.7)
       faraday (~> 0.9, >= 0.9.1)
+      json-jwt (~> 1.2, >= 1.2.3)
     actioncable (5.0.1)
       actionpack (= 5.0.1)
       nio4r (~> 1.2)
@@ -52,6 +53,7 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    bindata (2.3.5)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.7)
@@ -109,8 +111,16 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.0.3)
+    json-jwt (1.7.1)
+      activesupport
+      bindata
+      multi_json (>= 1.3)
+      securecompare
+      url_safe_base64
     launchy (2.4.3)
       addressable (~> 2.3)
+    letsencrypt_http_challenge (0.0.3)
+      acme-client (~> 0.3.0)
     letter_opener (1.4.1)
       launchy (~> 2.2)
     listen (3.0.8)
@@ -211,6 +221,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    securecompare (1.0.0)
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
@@ -245,6 +256,7 @@ GEM
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.1.3)
+    url_safe_base64 (0.2.2)
     warden (1.2.7)
       rack (>= 1.0)
     websocket-driver (0.6.5)
@@ -255,7 +267,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acme-client
   acts_as_votable (~> 0.10.0)
   autoprefixer-rails
   better_errors
@@ -270,6 +281,7 @@ DEPENDENCIES
   i18n-tasks (~> 0.9.12)
   jbuilder (~> 2.0)
   jquery-rails
+  letsencrypt_http_challenge
   letter_opener
   listen (~> 3.0.5)
   pg
