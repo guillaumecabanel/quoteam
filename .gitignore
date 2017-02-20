@@ -9,6 +9,3 @@ public/assets
 
 # Ignore application configuration
 /config/application.yml
-
-# Ignore SSL config
-/config/ssl/
