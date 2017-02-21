@@ -1,4 +1,5 @@
-meta_title: "Quoteam"
+# https://www.lewagon.com/blog/tuto-setup-metatags-rails
+meta_title: "QuoTeam"
 meta_description: "Share your best quotes with your team!"
-meta_image: "hedgenews_meta_image.png" # image from app/assets/images/
-twitter_account: "" # Needed for Twitter Cards
+meta_image: "quoteam_meta.png" # image from app/assets/images/
+twitter_account: "@guicabanel" # Needed for Twitter Cards
