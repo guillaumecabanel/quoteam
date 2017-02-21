@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/guillaumecabanel/letsencrypt_http_challenge.git
-  revision: bb4152e2b35c2c2bcb71251b86efda6cd356a7b9
+  revision: 251554c87de27f3a830f2b9621946d28330658d5
   specs:
     letsencrypt_http_challenge (0.0.3)
       acme-client (~> 0.3.0)
