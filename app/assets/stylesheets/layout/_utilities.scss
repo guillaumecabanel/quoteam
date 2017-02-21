@@ -28,3 +28,9 @@
 .text-red{
   color: $red;
 }
+.text-white{
+  color: $white;
+}
+.text-light{
+  color: darken($white, 10%);
+}

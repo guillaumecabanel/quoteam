@@ -1,0 +1,16 @@
+.modal.fade#about tabindex="-1" role="dialog"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true" &times;
+        h4.modal-title = t('footer.about.title')
+      
+      .modal-body
+        p = t('footer.about.description')
+        hr
+        = link_to "https://github.com/guillaumecabanel/quoteam/blob/master/MIT-LICENSE", target: "_blank" do
+          = t('footer.about.license')
+      
+      .modal-footer
+        button.btn.btn-default type="button" data-dismiss="modal" Close

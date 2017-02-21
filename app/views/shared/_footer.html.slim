@@ -1,0 +1,14 @@
+footer
+  .flexbox.flexbox-around
+    a.text-white.btn.btn-link data-toggle="modal" data-target="#about"
+      = t('footer.about.title')
+
+    .text-light
+      = t('footer.contribute_at')
+      | &nbsp; &nbsp;
+      = link_to "https://github.com/guillaumecabanel/quoteam", class: "text-white", target: "_blank" do
+        i.fa.fa-github
+        | /guillaumecabanel/quoteam
+    
+  = render 'shared/modal_about'
+  

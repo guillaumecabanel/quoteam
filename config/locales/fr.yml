@@ -1,5 +1,11 @@
 ---
 fr:
+  footer:
+    about:
+      title: À propos
+      contribute_at: Participez sur
+      description: Voir le répo GitHub pour plus d'information.
+      license: License MIT
   enrollments:
     new:
       enroll: Rejoindre ce groupe

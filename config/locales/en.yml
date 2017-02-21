@@ -1,5 +1,11 @@
 ---
 en:
+  footer:
+    about:
+      title: About
+      description: See GitHub repo for more info.
+      license: MIT license
+    contribute_at: Contribute at
   enrollments:
     new:
       enroll: Join this team
