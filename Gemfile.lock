@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/guillaumecabanel/letsencrypt_http_challenge.git
+  revision: bb4152e2b35c2c2bcb71251b86efda6cd356a7b9
+  specs:
+    letsencrypt_http_challenge (0.0.3)
+      acme-client (~> 0.3.0)
+      figaro
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -119,8 +127,6 @@ GEM
       url_safe_base64
     launchy (2.4.3)
       addressable (~> 2.3)
-    letsencrypt_http_challenge (0.0.3)
-      acme-client (~> 0.3.0)
     letter_opener (1.4.1)
       launchy (~> 2.2)
     listen (3.0.8)
@@ -281,7 +287,7 @@ DEPENDENCIES
   i18n-tasks (~> 0.9.12)
   jbuilder (~> 2.0)
   jquery-rails
-  letsencrypt_http_challenge
+  letsencrypt_http_challenge!
   letter_opener
   listen (~> 3.0.5)
   pg

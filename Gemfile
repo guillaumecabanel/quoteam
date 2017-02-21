@@ -13,7 +13,9 @@ gem 'pundit'
 gem 'slim'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'postmark'
-gem 'letsencrypt_http_challenge' # SSL
+
+# letsencrypt_http_challenge fork with clevercloud autoconfig
+gem 'letsencrypt_http_challenge', git: 'git://github.com/guillaumecabanel/letsencrypt_http_challenge.git'
 
 gem 'sass-rails'
 gem 'jquery-rails'
