@@ -1,6 +1,12 @@
-h2 = t('.join_team')
-= form_tag enrollments_path, method: :post do
-  .form-group
-    = label_tag "team[invite_code]", t('.invite_code')
-    = text_field_tag "team[invite_code]", "", class: 'form-control'
-  = submit_tag t('.enroll'), class: 'btn btn-success'
+.container
+  .row
+    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+      .panel.panel-success
+        .panel-heading = t('.join_team')
+        .panel-body
+          = form_tag enrollments_path, method: :post do
+          .form-group
+          = label_tag "team[invite_code]", t('.invite_code')
+          = text_field_tag "team[invite_code]", "", class: 'form-control'
+          br
+          = submit_tag t('.enroll'), class: 'btn btn-success'

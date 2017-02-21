@@ -1,4 +1,9 @@
-h2 = t('.new_team')
-= simple_form_for @team do |f|
-  = f.input :name
-  = f.button :submit, class: 'btn btn-success'
+.container
+  .row
+    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
+      .panel.panel-success
+        .panel-heading = t('.new_team')
+        .panel-body
+          = simple_form_for @team do |f|
+            = f.input :name
+            = f.button :submit, class: 'btn btn-success'
