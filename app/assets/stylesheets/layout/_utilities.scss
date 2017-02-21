@@ -3,6 +3,14 @@
  * These are examples of utilities classes
  * Feel free to change them and create your own
  * ------------------------------------- */
+html{
+  height: 100%; 
+}
+
+body{
+  position: relative;
+  min-height: 100%;
+}
 
 // Paddings
 .padded {
