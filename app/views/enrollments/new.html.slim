@@ -5,8 +5,7 @@
         .panel-heading = t('.join_team')
         .panel-body
           = form_tag enrollments_path, method: :post do
-          .form-group
-          = label_tag "team[invite_code]", t('.invite_code')
-          = text_field_tag "team[invite_code]", "", class: 'form-control'
-          br
-          = submit_tag t('.enroll'), class: 'btn btn-success'
+            .form-group
+              = label_tag "team[invite_code]", t('.invite_code')
+              = text_field_tag "team[invite_code]", "", class: 'form-control'
+            = submit_tag t('.enroll'), class: 'btn btn-success'
