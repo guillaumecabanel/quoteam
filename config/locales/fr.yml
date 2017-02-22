@@ -30,7 +30,8 @@ fr:
     destroy:
       quote_deleted: Citation supprimée.
     action_panel:
-      time_ago: "il y a %{time}."
+      time_ago: "il y a %{time}"
+      by_user: "par %{user}"
   teams:
     index:
       your_teams: Vos groupes

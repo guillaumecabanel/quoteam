@@ -5,7 +5,10 @@
         = link_to team_quote_path(team, quote), method: :delete, class: 'btn btn-xs btn-warning' do
           i.fa.fa-trash
         | &nbsp;
-      span.quote-action-panel-time = t('.time_ago', time: distance_of_time_in_words(Time.now, quote.created_at))
+      span.quote-action-panel-time
+        = t('.time_ago', time: distance_of_time_in_words(Time.now, quote.created_at))
+        | &nbsp;
+        = t('.by_user', user: quote.user.email)
     div    
       em = quote.get_likes.size
       '&nbsp;

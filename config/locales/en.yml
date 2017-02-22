@@ -30,7 +30,8 @@ en:
     destroy:
       quote_deleted: Quote has been deleted.
     action_panel:
-      time_ago: "%{time} ago."
+      time_ago: "%{time} ago"
+      by_user: "by %{user}"
   teams:
     index:
       your_teams: Your teams

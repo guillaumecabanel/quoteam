@@ -5,6 +5,7 @@ class QuotesController < ApplicationController
   def create
     @quote = Quote.new(quote_params)
     @quote.team = @team
+    @quote.user = current_user
     authorize @quote
     if @quote.save
       redirect_to team_path(@team)
