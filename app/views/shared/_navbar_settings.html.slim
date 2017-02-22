@@ -1,0 +1,6 @@
+- if current_user
+  li.navbar-text = current_user.email
+  li = link_to t('devise.sign_out'), destroy_user_session_path, method: 'delete'
+- else
+  li = link_to t('devise.shared.links.sign_up'), new_user_registration_path
+  li = link_to t('devise.shared.links.sign_in'), new_user_session_path
