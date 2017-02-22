@@ -1,0 +1,13 @@
+.modal.fade id="edit-quote-#{quote.id}" tabindex="-1" role="dialog"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true" &times;
+        h4.modal-title = t('.edit')
+      
+      .modal-body
+        = simple_form_for [@team, quote] do |f|
+          = f.input :content
+          = f.input :author 
+          = f.button :submit, t('.update'), class: 'btn btn-warning'

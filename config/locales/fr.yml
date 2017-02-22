@@ -27,11 +27,16 @@ fr:
     new_form:
       new: Ajouter une citation !
       create: Ajouter cette citation
+    edit_form:
+      edit: Éditer cette citation
+      update: Mettre à jour
     destroy:
       quote_deleted: Citation supprimée.
     action_panel:
       time_ago: "il y a %{time}"
       by_user: "par %{user}"
+      by_you: "par vous"
+      edit: éditer
   teams:
     index:
       your_teams: Vos groupes

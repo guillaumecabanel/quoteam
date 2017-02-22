@@ -27,11 +27,16 @@ en:
     new_form:
       new: Add a quote!
       create: Add this quote
+    edit_form:
+      edit: Edit this quote
+      update: Update
     destroy:
       quote_deleted: Quote has been deleted.
     action_panel:
       time_ago: "%{time} ago"
       by_user: "by %{user}"
+      by_you: "by you"
+      edit: edit
   teams:
     index:
       your_teams: Your teams

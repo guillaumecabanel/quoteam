@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     root to: 'pages#home'
 
     resources :teams, only: [:index, :show, :new, :create] do
-      resources :quotes, only: [:create, :destroy] do
+      resources :quotes, only: [:update, :create, :destroy] do
         member do
           patch :upvote
         end

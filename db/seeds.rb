@@ -40,6 +40,7 @@ puts 'Generating fake quotes...'
   quote = Quote.create!(
     content: Faker::ChuckNorris.fact,
     author: Faker::Name.name,
-    team: team
+    team: team,
+    user: User.all.sample
   )
 end
