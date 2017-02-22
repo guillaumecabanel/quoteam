@@ -1,11 +1,26 @@
 nav.navbar.navbar-default
   .container-fluid
-    = link_to 'QuoTeam', root_path, class: 'navbar-brand'
+    = link_to 'QuoTeam', root_path, class: 'navbar-brand visible-sm visible-md visible-lg'
 
-    ul.nav.navbar-nav.navbar-right
+    ul.nav.navbar-nav.navbar-right.visible-md.visible-lg
       - if current_user
         li.navbar-text = current_user.email
         li = link_to t('devise.sign_out'), destroy_user_session_path, method: 'delete'
       - else
         li = link_to t('devise.shared.links.sign_up'), new_user_registration_path
         li = link_to t('devise.shared.links.sign_in'), new_user_session_path
+
+    ul.nav.navbar-nav.navbar-right.visible-xs.visible-sm
+      li
+        a.dropdown-toggle data-toggle="dropdown" role="button"
+          i.fa.fa-lg.fa-bars
+        ul.dropdown-menu
+          = link_to 'QuoTeam', root_path, class: 'navbar-brand hidden-sm'
+          - if current_user
+            li.navbar-text = current_user.email
+            li = link_to t('devise.sign_out'), destroy_user_session_path, method: 'delete'
+          - else
+            li = link_to t('devise.shared.links.sign_up'), new_user_registration_path
+            li = link_to t('devise.shared.links.sign_in'), new_user_session_path
+            
+        
