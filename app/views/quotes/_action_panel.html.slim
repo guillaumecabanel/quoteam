@@ -14,8 +14,10 @@
         span.btn-link role="button" data-toggle="modal" data-target="#edit-quote-#{quote.id}"
           = t('.edit')
         | )
-      - else
+      - elsif quote.user.nickname
         = t('.by_user', user: quote.user.nickname.capitalize)
+      - else
+        = t('.by_user', user: 'anonym')
     div    
       em = quote.get_likes.size
       '&nbsp;

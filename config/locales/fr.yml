@@ -7,6 +7,7 @@ fr:
       license: License MIT
       contribute_at: Participez sur
   profiles:
+    choose_nickname: Choisir un surnom
     edit:
       your_profile: Votre profil
       update: Mettre à jour
