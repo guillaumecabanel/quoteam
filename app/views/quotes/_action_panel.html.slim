@@ -15,7 +15,7 @@
           = t('.edit')
         | )
       - else
-        = t('.by_user', user: quote.user.email)
+        = t('.by_user', user: quote.user.nickname)
     div    
       em = quote.get_likes.size
       '&nbsp;
