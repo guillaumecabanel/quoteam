@@ -3,9 +3,15 @@ fr:
   footer:
     about:
       title: À propos
-      contribute_at: Participez sur
       description: Voir le répo GitHub pour plus d'information.
       license: License MIT
+      contribute_at: Participez sur
+  profiles:
+    edit:
+      your_profile: Votre profil
+      update: Mettre à jour
+    update:
+      profile_updated: Profil mis à jour
   enrollments:
     new:
       enroll: Rejoindre ce groupe

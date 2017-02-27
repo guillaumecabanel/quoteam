@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   mount LetsencryptHttpChallenge::Engine => "/" unless ENV['LE_HTTP_CHALLENGE_RESPONSE'].blank?
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "users/registrations" }
+
+  resource :profile, only: [:show, :edit, :update]
 
   scope '(:locale)', locale: /fr/ do
     root to: 'pages#home'

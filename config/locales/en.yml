@@ -6,6 +6,12 @@ en:
       description: See GitHub repo for more info.
       license: MIT license
     contribute_at: Contribute at
+  profiles:
+    edit:
+      your_profile: Your profile
+      update: Update
+    update:
+      profile_updated: Profile updated
   enrollments:
     new:
       enroll: Join this team
