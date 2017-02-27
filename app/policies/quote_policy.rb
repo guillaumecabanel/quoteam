@@ -18,7 +18,7 @@ class QuotePolicy < ApplicationPolicy
   end
 
   def destroy?
-    user && user.admin?
+    ( user && user.admin? ) || scope.where(user: user)
   end
 
   def upvote?
