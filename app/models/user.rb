@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :teams, through: :enrollment
   has_many :quotes
 
+  validates :nickname, uniqueness: :true
+
 end
