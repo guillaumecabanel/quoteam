@@ -14,7 +14,7 @@ class QuotePolicy < ApplicationPolicy
   end
 
   def update?
-    user
+    destroy?
   end
 
   def destroy?

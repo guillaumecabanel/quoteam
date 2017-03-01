@@ -8,17 +8,16 @@
       span.quote-action-panel-text
         = t('.time_ago', time: distance_of_time_in_words(Time.now, quote.created_at))
         | &nbsp;
-      - if quote.user == current_user
-        = t('.by_you')
+
+      = quote_owner(current_user, quote)
+      
+      - if policy(quote).update?
         | &nbsp; (
         span.btn-link role="button" data-toggle="modal" data-target="#edit-quote-#{quote.id}"
           = t('.edit')
         | )
-      - elsif quote.user.nickname
-        = t('.by_user', user: quote.user.nickname.capitalize)
-      - else
-        = t('.by_user', user: 'anonym')
-    div    
+        
+    div
       em = quote.get_likes.size
       '&nbsp;
       - if policy(quote).upvote?
