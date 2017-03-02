@@ -5,8 +5,19 @@
         = link_to team_quote_path(team, quote), method: :delete, class: 'btn btn-xs btn-warning' do
           i.fa.fa-trash
         | &nbsp;
-      span.quote-action-panel-time = t('.time_ago', time: distance_of_time_in_words(Time.now, quote.created_at))
-    div    
+      span.quote-action-panel-text
+        = t('.time_ago', time: distance_of_time_in_words(Time.now, quote.created_at))
+        | &nbsp;
+
+      = quote_owner(current_user, quote)
+      
+      - if policy(quote).update?
+        | &nbsp; (
+        span.btn-link role="button" data-toggle="modal" data-target="#edit-quote-#{quote.id}"
+          = t('.edit')
+        | )
+        
+    div
       em = quote.get_likes.size
       '&nbsp;
       - if policy(quote).upvote?
@@ -14,3 +25,5 @@
           i class=quote_like_css(current_user,  quote)
       - else
         i class=quote_like_css(nil,  quote)
+
+  = render 'quotes/edit_form', quote: quote

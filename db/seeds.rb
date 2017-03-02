@@ -13,6 +13,7 @@ puts 'Generating an admin...'
 User.create!(
   email: 'admin@email.com',
   password: 'password',
+  nickname: "#{Faker::Name.name}-admin",
   admin: true
 )
 
@@ -21,6 +22,7 @@ puts 'Generating users...'
   User.create!(
     email: Faker::Internet.email,
     password: 'password',
+    nickname: Faker::Name.first_name,
   )
 end
 
@@ -40,6 +42,7 @@ puts 'Generating fake quotes...'
   quote = Quote.create!(
     content: Faker::ChuckNorris.fact,
     author: Faker::Name.name,
-    team: team
+    team: team,
+    user: User.all.sample
   )
 end

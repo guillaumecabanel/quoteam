@@ -7,5 +7,8 @@ class User < ApplicationRecord
   acts_as_voter
   has_many :enrollments
   has_many :teams, through: :enrollment
+  has_many :quotes
+
+  validates :nickname, presence: :true, uniqueness: :true, on: :update
 
 end

@@ -6,6 +6,13 @@ en:
       description: See GitHub repo for more info.
       license: MIT license
     contribute_at: Contribute at
+  profiles:
+    choose_nickname: Choose a nickname
+    edit:
+      your_profile: Your profile
+      update: Update
+    update:
+      profile_updated: Profile updated
   enrollments:
     new:
       enroll: Join this team
@@ -27,10 +34,16 @@ en:
     new_form:
       new: Add a quote!
       create: Add this quote
+    edit_form:
+      edit: Edit this quote
+      update: Update
     destroy:
       quote_deleted: Quote has been deleted.
     action_panel:
-      time_ago: "%{time} ago."
+      time_ago: "%{time} ago"
+      by_user: "by %{user}"
+      by_you: "by you"
+      edit: edit
   teams:
     index:
       your_teams: Your teams

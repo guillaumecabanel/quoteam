@@ -13,8 +13,12 @@ class QuotePolicy < ApplicationPolicy
     user
   end
 
+  def update?
+    destroy?
+  end
+
   def destroy?
-    user && user.admin?
+    ( user && user.admin? ) || @record.user == user
   end
 
   def upvote?

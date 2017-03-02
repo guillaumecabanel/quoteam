@@ -1,16 +1,23 @@
 class QuotesController < ApplicationController
-  before_action :set_quote, only: [:destroy, :upvote]
-  before_action :set_team, only: [:create, :upvote, :destroy]
+  before_action :set_quote, only: [:update, :destroy, :upvote]
+  before_action :set_team, only: [:create, :update, :upvote, :destroy]
 
   def create
     @quote = Quote.new(quote_params)
     @quote.team = @team
+    @quote.user = current_user
     authorize @quote
     if @quote.save
       redirect_to team_path(@team)
     else
       redirect_to team_path(@team)
     end
+  end
+
+  def update
+    @quote.update(quote_params)
+    authorize @quote
+    redirect_to team_path(@team)
   end
 
   def destroy

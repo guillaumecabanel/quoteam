@@ -3,9 +3,16 @@ fr:
   footer:
     about:
       title: À propos
-      contribute_at: Participez sur
       description: Voir le répo GitHub pour plus d'information.
       license: License MIT
+      contribute_at: Participez sur
+  profiles:
+    choose_nickname: Choisir un surnom
+    edit:
+      your_profile: Votre profil
+      update: Mettre à jour
+    update:
+      profile_updated: Profil mis à jour
   enrollments:
     new:
       enroll: Rejoindre ce groupe
@@ -27,10 +34,16 @@ fr:
     new_form:
       new: Ajouter une citation !
       create: Ajouter cette citation
+    edit_form:
+      edit: Éditer cette citation
+      update: Mettre à jour
     destroy:
       quote_deleted: Citation supprimée.
     action_panel:
-      time_ago: "il y a %{time}."
+      time_ago: "il y a %{time}"
+      by_user: "par %{user}"
+      by_you: "par vous"
+      edit: éditer
   teams:
     index:
       your_teams: Vos groupes
