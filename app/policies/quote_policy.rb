@@ -5,6 +5,10 @@ class QuotePolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    user
+  end
+
   def show?
     user
   end
