@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :teams, only: [:index, :show, :new, :create] do
       resources :quotes, only: [:index, :update, :create, :destroy] do
         member do
-          patch :upvote
+          patch :like
         end
       end
     end

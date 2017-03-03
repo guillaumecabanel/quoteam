@@ -25,7 +25,7 @@ class QuotePolicy < ApplicationPolicy
     ( user && user.admin? ) || @record.user == user
   end
 
-  def upvote?
+  def like?
     user
   end
 end
