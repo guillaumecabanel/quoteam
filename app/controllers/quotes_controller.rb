@@ -36,14 +36,17 @@ class QuotesController < ApplicationController
   end
 
   def like
+    authorize @quote
     if current_user.voted_for? @quote
       current_user.unvote_for @quote
     else
       current_user.up_votes @quote
     end
 
-    authorize @quote
-    redirect_to team_quotes_path(@team)
+    respond_to do |format|
+      format.html { redirect_to team_quotes_path(@team) }
+      format.js
+    end
   end
 
   private

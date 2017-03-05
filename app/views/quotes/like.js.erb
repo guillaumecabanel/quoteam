@@ -1,0 +1,9 @@
+// Remove the border from selected link
+$('#likes-<%= @quote.id %> > a').blur();
+
+// Update liked number
+$('#likes-<%= @quote.id %> > .likes').text(<%= @quote.get_likes.size %>);
+
+// Toggle heart color
+$('#likes-<%= @quote.id %> > a > i.fa').toggleClass('fa-heart');
+$('#likes-<%= @quote.id %> > a > i.fa').toggleClass('fa-heart-o');
