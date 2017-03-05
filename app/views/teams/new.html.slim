@@ -6,4 +6,5 @@
         .panel-body
           = simple_form_for @team do |f|
             = f.input :name
-            = f.button :submit, class: 'btn btn-success'
+            = f.button :button, t('.save').html_safe, class: 'btn btn-success',
+                                data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> #{t('.saving')}" }

@@ -53,6 +53,8 @@ en:
       join_one_with_invite: join one with an invite code!
     new:
       new_team: New team
+      save: Create this team
+      saving: Creating new team...
     create:
       team_created: "%{team} has been created! Invite some friends :)"
   users:
