@@ -4,11 +4,18 @@ footer
       = t('footer.about.title')
 
     .text-light
-      = t('footer.contribute_at')
-      | &nbsp; &nbsp;
       = link_to "https://github.com/guillaumecabanel/quoteam", class: "text-white", target: "_blank" do
-        i.fa.fa-github
-        | /guillaumecabanel/quoteam
+        span.visible-xs.visible-sm
+          = t('footer.contribute_at')
+          | &nbsp; &nbsp;
+          i.fa.fa-github
+          
+        span.visible-md.visible-lg
+          = t('footer.contribute_at')
+          | &nbsp; &nbsp;
+          i.fa.fa-github
+          | /guillaumecabanel/quoteam
+        
     
   = render 'shared/modal_about'
   
