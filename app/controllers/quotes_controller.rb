@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
-  before_action :set_quote, only: [:update, :destroy, :upvote]
-  before_action :set_team, only: [:index, :create, :update, :upvote, :destroy]
+  before_action :set_quote, only: [:update, :destroy, :like]
+  before_action :set_team, only: [:index, :create, :update, :like, :destroy]
 
   def index
     @quotes = policy_scope(Quote.where(team: @team))
@@ -35,9 +35,12 @@ class QuotesController < ApplicationController
     redirect_to team_quotes_path(@team)
   end
 
-  def upvote
-    @quote.liked_by current_user
-    @quote.dislike_by current_user unless @quote.vote_registered?
+  def like
+    if current_user.voted_for? @quote
+      current_user.unvote_for @quote
+    else
+      current_user.up_votes @quote
+    end
 
     authorize @quote
     redirect_to team_quotes_path(@team)

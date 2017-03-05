@@ -20,8 +20,8 @@
     div
       em = quote.get_likes.size
       '&nbsp;
-      - if policy(quote).upvote?
-        = link_to upvote_team_quote_path(team, quote), method: :patch, class: 'text-red' do
+      - if policy(quote).like?
+        = link_to like_team_quote_path(team, quote), method: :patch, class: 'text-red' do
           i class=quote_like_css(current_user,  quote)
       - else
         i class=quote_like_css(nil,  quote)
