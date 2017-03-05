@@ -30,6 +30,9 @@ fr:
     alert:
       not_authorized: Vous n'êtes pas autorisé à réaliser cette action
   quotes:
+    index:
+      share: Partagez ce code d'inviation pour inviter de nouveaux membres
+      new: Ajouter une citation
     quote: Citation
     new_form:
       new: Ajouter une citation !
@@ -50,8 +53,6 @@ fr:
       join_one_with_invite: en rejoindre un avec un code d'invitation !
     new:
       new_team: Nouveau groupe
-    show:
-      share: Partagez ce code d'inviation pour inviter de nouveaux membres
     create:
       team_created: "%{team} a été créé ! Invitez y vos amis :)"
   users:

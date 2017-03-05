@@ -30,6 +30,9 @@ en:
     alert:
       not_authorized: You are not authorized to perform this action.
   quotes:
+    index:
+      new: Add a quote
+      share: Share this code to invite new members
     quote: Quote
     new_form:
       new: Add a quote!
@@ -50,8 +53,6 @@ en:
       join_one_with_invite: join one with an invite code!
     new:
       new_team: New team
-    show:
-      share: Share this code to invite new members
     create:
       team_created: "%{team} has been created! Invite some friends :)"
   users:

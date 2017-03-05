@@ -1,10 +1,12 @@
-.container
-  .row
-    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
-      .panel.panel-success
-        .panel-heading = t('.new')
-        .panel-body
-          = simple_form_for [@team, quote] do |f|
-            = f.input :content
-            = f.input :author 
-            = f.button :submit, t('.create'), class: 'btn btn-success'
+.modal.fade id="new-quote" tabindex="-1" role="dialog"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal" aria-label="Close"
+          span aria-hidden="true" &times;
+        h4.modal-title = t('.new')
+      .modal-body
+        = simple_form_for [@team, quote] do |f|
+          = f.input :content
+          = f.input :author 
+          = f.button :submit, t('.create'), class: 'btn btn-success'

@@ -6,6 +6,10 @@ h1 = @team.name
     = text_field_tag "", @team.invite_code
 
 - if policy(@quote).create?
+  button.btn.btn-primary role="button" data-toggle="modal" data-target="#new-quote"
+    i.fa.fa-plus
+    | &nbsp;
+    = t('.new')
   = render 'quotes/new_form', quote: @quote
 
   hr
