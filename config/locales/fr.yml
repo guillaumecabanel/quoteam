@@ -18,6 +18,7 @@ fr:
       enroll: Rejoindre ce groupe
       invite_code: code d'invitation
       join_team: Rejoindre un groupe avec un code d'invitation
+      joining: Ralliement...
     create:
       team_added: "Vous avez rejoins %{team}!"
       invalid_code: Code invalide

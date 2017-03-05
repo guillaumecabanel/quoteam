@@ -8,4 +8,5 @@
             .form-group
               = label_tag "team[invite_code]", t('.invite_code')
               = text_field_tag "team[invite_code]", "", class: 'form-control'
-            = submit_tag t('.enroll'), class: 'btn btn-success'
+            = button_tag t('.enroll').html_safe, class: 'btn btn-success',
+                                data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> #{t('.joining')}" }

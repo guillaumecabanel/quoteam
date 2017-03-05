@@ -18,6 +18,7 @@ en:
       enroll: Join this team
       invite_code: Invite code
       join_team: Join team by invite code
+      joining: Joining...
     create:
       team_added: "You've joined %{team}!"
       invalid_code: Invalid code
