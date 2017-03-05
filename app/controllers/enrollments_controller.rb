@@ -11,7 +11,7 @@ class EnrollmentsController < ApplicationController
       authorize @team
       Enrollment.create(user: current_user, team: @team)
       flash[:notice] = t('.team_added', team: @team.name)
-      redirect_to team_path(@team)
+      redirect_to team_quotes_path(@team)
     else
       @team = Team.new
       authorize @team
