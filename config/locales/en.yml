@@ -11,6 +11,7 @@ en:
     edit:
       your_profile: Your profile
       update: Update
+      saving: Saving...
     update:
       profile_updated: Profile updated
   enrollments:

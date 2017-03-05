@@ -8,4 +8,4 @@
             = f.error_notification
             
             = f.input :nickname
-            = f.button :submit, t('.update'), class: 'btn btn-warning'
+            = f.button :button, t('.update').html_safe, class: 'btn btn-warning', data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> #{t('.saving')}" }

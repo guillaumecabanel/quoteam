@@ -11,6 +11,7 @@ fr:
     edit:
       your_profile: Votre profil
       update: Mettre à jour
+      saving: Enregitrement...
     update:
       profile_updated: Profil mis à jour
   enrollments:
