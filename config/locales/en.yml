@@ -38,6 +38,7 @@ en:
     new_form:
       new: Add a quote!
       create: Add this quote
+      saving: Saving...
     edit_form:
       edit: Edit this quote
       update: Update

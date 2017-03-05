@@ -9,4 +9,5 @@
         = simple_form_for [@team, quote] do |f|
           = f.input :content
           = f.input :author 
-          = f.button :submit, t('.create'), class: 'btn btn-success'
+          = f.button :button, t('.create').html_safe, class: 'btn btn-success',
+                              data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> #{t('.saving')}" }

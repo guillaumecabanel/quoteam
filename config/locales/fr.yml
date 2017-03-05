@@ -38,6 +38,7 @@ fr:
     new_form:
       new: Ajouter une citation !
       create: Ajouter cette citation
+      saving: Enregitrement en cours...
     edit_form:
       edit: Éditer cette citation
       update: Mettre à jour
