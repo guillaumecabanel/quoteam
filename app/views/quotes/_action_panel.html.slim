@@ -17,11 +17,11 @@
           = t('.edit')
         | )
         
-    div
-      em = quote.get_likes.size
+    div id="likes-#{quote.id}"
+      em.likes = quote.get_likes.size
       '&nbsp;
       - if policy(quote).like?
-        = link_to like_team_quote_path(team, quote), method: :patch, class: 'text-red' do
+        = link_to like_team_quote_path(team, quote), method: :patch, remote: true, class: 'text-red' do
           i class=quote_like_css(current_user,  quote)
       - else
         i class=quote_like_css(nil,  quote)
