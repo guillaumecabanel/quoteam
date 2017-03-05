@@ -4,7 +4,7 @@
     - current_user.enrollments.each do |enrollment|
       li.list-group-item.flexbox.flexbox-between
         div
-          = link_to enrollment.team.name, team_path(enrollment.team)
+          = link_to enrollment.team.name, team_quotes_path(enrollment.team)
           | &nbsp;(
           = pluralize(enrollment.team.enrollments.count, t('users.member'))
           | )
