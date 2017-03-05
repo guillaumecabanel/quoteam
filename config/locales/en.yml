@@ -42,6 +42,7 @@ en:
     edit_form:
       edit: Edit this quote
       update: Update
+      saving: Saving...
     destroy:
       quote_deleted: Quote has been deleted.
     action_panel:

@@ -42,6 +42,7 @@ fr:
     edit_form:
       edit: Éditer cette citation
       update: Mettre à jour
+      saving: Enregitrement en cours...
     destroy:
       quote_deleted: Citation supprimée.
     action_panel:
