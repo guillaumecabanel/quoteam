@@ -36,11 +36,13 @@ class QuotesController < ApplicationController
   end
 
   def like
-    @quote.liked_by current_user
-    @quote.dislike_by current_user unless @quote.vote_registered?
+    if current_user.voted_for? @quote
+      current_user.unvote_for @quote
+    else
+      current_user.up_votes @quote
+    end
 
     authorize @quote
-    redirect_to team_quotes_path(@team)
   end
 
   private

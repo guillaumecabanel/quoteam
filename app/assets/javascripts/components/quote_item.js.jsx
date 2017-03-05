@@ -10,6 +10,19 @@ var QuoteItem = React.createClass({
         <div className="quote-author">
           — {this.props.quote.author}
         </div>
+        <div className="quote-action-panel">
+          <div className="flexbox flexbox-between">
+            <div>
+              <span className="quote-action-panel-text">
+                { this.props.quote.created_at }
+              </span>
+              &nbsp; by { this.props.quote.user.nickname }
+            </div>
+            <div className="quote-like">
+              <Like quote={this.props.quote} />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
