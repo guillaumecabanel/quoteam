@@ -3,7 +3,7 @@ class QuotesController < ApplicationController
   before_action :set_team, only: [:index, :create, :update, :upvote, :destroy]
 
   def index
-    @quotes = Quote.where(team: @team)
+    @quotes = policy_scope(Quote.where(team: @team))
     authorize @quotes
     @quote = Quote.new
     authorize @quote
@@ -47,7 +47,6 @@ class QuotesController < ApplicationController
 
     def set_team
       @team = Team.find(params[:team_id])
-      authorize @team
     end
 
     def set_quote
