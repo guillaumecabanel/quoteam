@@ -22,7 +22,7 @@ class QuotePolicy < ApplicationPolicy
   end
 
   def destroy?
-    ( user && user.admin? ) || @record.user == user
+    record.user == user || ( user && user.admin? )
   end
 
   def like?

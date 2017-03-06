@@ -4,10 +4,14 @@ class QuotesController < ApplicationController
 
   def index
     @quotes = policy_scope(Quote.where(team: @team))
-    authorize @quotes
-    @quote = Quote.new
-    authorize @quote
-    @members = Enrollment.where(team: @team)
+    if Enrollment.where(user: current_user, team: @team).any?
+      authorize @quotes
+      @quote = Quote.new
+      authorize @quote
+      @members = Enrollment.where(team: @team)
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -36,16 +40,20 @@ class QuotesController < ApplicationController
   end
 
   def like
-    authorize @quote
-    if current_user.voted_for? @quote
-      current_user.unvote_for @quote
-    else
-      current_user.up_votes @quote
-    end
+    if Enrollment.where(user: current_user, team: @team).any?
+      authorize @quote
+      if current_user.voted_for? @quote
+        current_user.unvote_for @quote
+      else
+        current_user.up_votes @quote
+      end
 
-    respond_to do |format|
-      format.html { redirect_to team_quotes_path(@team) }
-      format.js
+      respond_to do |format|
+        format.html { redirect_to team_quotes_path(@team) }
+        format.js
+      end
+    else
+      redirect_to root_path
     end
   end
 
