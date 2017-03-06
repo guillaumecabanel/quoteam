@@ -26,8 +26,6 @@ fr:
   pages:
     home:
       catch_phrase: Partagez vos meilleures citations avec votre équipe !
-      create_a_new_team: Créer un groupe ou
-      no_team?: Pas encore de groupe ?
   pundit:
     alert:
       not_authorized: Vous n'êtes pas autorisé à réaliser cette action
@@ -56,6 +54,8 @@ fr:
       edit: éditer
   teams:
     index:
+      create_a_new_team: Créer un groupe ou
+      no_team?: Pas encore de groupe ?
       your_teams: Mes groupes
       join_one_with_invite: en rejoindre un avec un code d'invitation !
     new:

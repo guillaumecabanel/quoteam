@@ -26,13 +26,13 @@ en:
   pages:
     home:
       catch_phrase: Share your best quotes with your team!
-      create_a_new_team: Create a new team or
-      no_team?: No team yet?
   pundit:
     alert:
       not_authorized: You are not authorized to perform this action.
   quotes:
     index:
+      create_a_new_team: Create a new team or
+      no_team?: No team yet?
       new: Add a quote
       share: Share this code to invite new members
     quotes:
