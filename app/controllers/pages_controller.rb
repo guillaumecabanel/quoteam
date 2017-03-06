@@ -7,8 +7,8 @@ class PagesController < ApplicationController
 
   def admin
     if current_user && current_user.admin?
-      @teams = Team.all
-      @users = User.all
+      @teams = Team.order(:name)
+      @users = User.order(:created_at)
     else
       redirect_to root_path
     end
