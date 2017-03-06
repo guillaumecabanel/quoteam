@@ -17,7 +17,10 @@ h1 = "#{@users.count} users"
   - @users.each do |user|
     li.list-group-item.flexbox.flexbox-between
       div
-        = user.nickname.capitalize
+        - if user.nickname
+          = user.nickname.capitalize
+        - else
+          | anonymous
         - if user.admin
           | &nbsp;
           .label.label-danger Admin
