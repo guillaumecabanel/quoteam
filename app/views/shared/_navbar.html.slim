@@ -4,12 +4,13 @@ nav.navbar.navbar-default
 
     ul.nav.navbar-nav.navbar-right.visible-md.visible-lg
       = render 'shared/navbar_settings'
+      
     ul.nav.navbar-nav.navbar-right.visible-xs.visible-sm
       li
         a.dropdown-toggle data-toggle="dropdown" role="button"
           i.fa.fa-lg.fa-bars
         ul.dropdown-menu
-          = link_to 'QuoTeam', root_path, class: 'navbar-brand hidden-sm'
+          li.visible-xs = link_to root_path do
+            i.fa.fa-home.fa-lg
           = render 'shared/navbar_settings'
-            
         

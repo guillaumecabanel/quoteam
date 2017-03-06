@@ -53,7 +53,7 @@ en:
       edit: edit
   teams:
     index:
-      your_teams: Your teams
+      my_teams: My teams
       join_one_with_invite: join one with an invite code!
     new:
       new_team: New team

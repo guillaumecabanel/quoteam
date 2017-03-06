@@ -1,5 +1,5 @@
 - if current_user.enrollments.any?
-  h2 = t('.your_teams')
+  h2 = t('.my_teams')
   .list-group
     - current_user.enrollments.each do |enrollment|
       li.list-group-item.flexbox.flexbox-between

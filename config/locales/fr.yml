@@ -53,7 +53,7 @@ fr:
       edit: éditer
   teams:
     index:
-      your_teams: Vos groupes
+      your_teams: Mes groupes
       join_one_with_invite: en rejoindre un avec un code d'invitation !
     new:
       new_team: Nouveau groupe
