@@ -1,6 +1,11 @@
-h1 = @team.name
+h1
+  = @team.name
+  button.btn.btn-primary.visible-xs.visible-sm role="button" data-toggle="modal" data-target="#invite"
+    i.fa.fa-share-alt.fa-lg
+  
+  = render 'quotes/invite', team: @team
 
-.panel.panel-info
+.panel.panel-info.visible-md.visible-lg
   .panel-body
     p = t('.share')
     = text_field_tag "", @team.invite_code
