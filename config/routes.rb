@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "users/registrations" }
 
-  resource :profile, only: [:show, :edit, :update]
 
   scope '(:locale)', locale: /fr/ do
     root to: 'pages#home'
@@ -16,6 +15,8 @@ Rails.application.routes.draw do
       end
     end
 
+    resource :profile, only: [:show, :edit, :update]
     resources :enrollments, only: [:new, :create]
+    get 'admin', to: 'pages#admin'
   end
 end
