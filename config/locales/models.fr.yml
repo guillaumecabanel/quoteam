@@ -1,0 +1,14 @@
+---
+fr:
+  activerecord:
+    models:
+      quote: Citation
+      team: Groupe
+    attributes:
+      team:
+        name: Nom
+      quote:
+        author: Auteur
+        content: Contenu
+      user:
+        nickname: Surnom
