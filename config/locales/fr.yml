@@ -35,7 +35,10 @@ fr:
     index:
       share: Partagez ce code d'inviation pour inviter de nouveaux membres
       new: Ajouter une citation
-    quote: Citation
+    quotes:
+      zero: Aucune citation
+      one: 1 citation
+      other: "%{count} citations"
     new_form:
       new: Ajouter une citation !
       create: Ajouter cette citation
@@ -62,4 +65,7 @@ fr:
     create:
       team_created: "%{team} a été créé ! Invitez y vos amis :)"
   users:
-    member: membre
+    members:
+      zero: pas de membre
+      one: Invitez des amis à ce groupe !
+      other: "%{count} membres"

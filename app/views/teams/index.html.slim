@@ -6,10 +6,10 @@
         div
           = link_to enrollment.team.name, team_quotes_path(enrollment.team)
           | &nbsp;(
-          = pluralize(enrollment.team.enrollments.count, t('users.member'))
+          = t('users.members', count: enrollment.team.enrollments.count)
           | )
         .label.label-info
-          = pluralize(enrollment.team.quotes.count, t('quotes.quote'))
+          = t('quotes.quotes', count: enrollment.team.quotes.count)
   
 - else
   .panel.panel-info

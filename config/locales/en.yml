@@ -35,7 +35,10 @@ en:
     index:
       new: Add a quote
       share: Share this code to invite new members
-    quote: Quote
+    quotes:
+      zero: No quotes
+      one: 1 quote
+      other: "%{count} quotes"
     new_form:
       new: Add a quote!
       create: Add this quote
@@ -62,4 +65,7 @@ en:
     create:
       team_created: "%{team} has been created! Invite some friends :)"
   users:
-    member: member
+    members:
+      zero: no membres
+      one: Invite your friends in this group!
+      other: "%{count} membres"
