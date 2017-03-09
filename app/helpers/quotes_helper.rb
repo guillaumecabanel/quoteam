@@ -8,10 +8,10 @@ module QuotesHelper
   def quote_owner(user, quote)
     if quote.user == user
       t('.by_you')
-    elsif quote.user.nickname
-      t('.by_user', user: quote.user.nickname.capitalize)
-    else
+    elsif quote.user.nickname.empty?
       t('.by_user', user: 'anonym')
+    else
+      t('.by_user', user: quote.user.nickname.capitalize)
     end
   end
 end
