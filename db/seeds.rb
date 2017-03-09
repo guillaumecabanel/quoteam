@@ -22,7 +22,7 @@ puts 'Generating users...'
   User.create!(
     email: Faker::Internet.email,
     password: 'password',
-    nickname: Faker::Name.first_name,
+    # nickname: Faker::Name.first_name,
   )
 end
 

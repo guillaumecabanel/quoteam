@@ -1,8 +1,8 @@
 - if current_user
-  - if  current_user.nickname
-      li = link_to current_user.nickname.capitalize, edit_profile_path
-  - else
+  - if  current_user.nickname.empty?
       li.btn-warning = link_to t('profiles.choose_nickname'), edit_profile_path
+  - else
+      li = link_to current_user.nickname.capitalize, edit_profile_path
   
   li = link_to t('devise.sign_out'), destroy_user_session_path, method: 'delete'
 - else
